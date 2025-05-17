@@ -16,6 +16,15 @@ pipeline {
             }
         }
 
+         stage('Clean') {
+            steps {
+                script {
+                    def workspace = pwd()
+                    bat "docker run --rm -v ${workspace}:/app -w /app maven:3.8.5-openjdk-11 mvn clean"
+                }
+            }
+        }
+
         stage('Build') {
             steps {
                 script {
