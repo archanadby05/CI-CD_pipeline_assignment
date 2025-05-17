@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'git@github.com:archanadby05/CI-CD_pipeline_assignment.git', branch: 'master'
+                git url: 'https://github.com/archanadby05/CI-CD_pipeline_assignment.git', branch: 'master'
             }
         }
 
