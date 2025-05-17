@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Parent Spring Boot POM for version management -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.5</version> <!-- Use the latest stable version of Spring Boot -->
+        <relativePath/> <!-- Lookup parent from repository -->
+    </parent>
+
+    <groupId>com.example</groupId>
+    <artifactId>airplane_mngt_system</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>airplace_mngt_system</name>
+    <description>Airline Management System</description>
+
+    <properties>
+        <java.version>11</java.version> <!-- Set the Java version you're using -->
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!-- Spring Boot Starter Web (for RESTful APIs) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.7.5</version> <!-- Explicit version -->
+        </dependency>
+
+        <!-- Spring Boot Starter Data JPA (for database integration) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>2.7.5</version> <!-- Explicit version -->
+        </dependency>
+
+        <!-- Spring Boot Starter Thymeleaf (for web pages) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <version>2.7.5</version> <!-- Explicit version -->
+        </dependency>
+
+        <!-- H2 Database (use any database you prefer) -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.1.214</version> <!-- Explicit version -->
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Spring Boot Starter Security (optional, for authentication) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>2.7.5</version> <!-- Explicit version -->
+        </dependency>
+
+        <!-- Spring Boot Starter Test (for unit tests) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>2.7.5</version> <!-- Explicit version -->
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Spring Boot Maven Plugin (for running the app with Maven) -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.7.5</version> <!-- Explicit version -->
+            </plugin>
+        </plugins>
+    </build>
+</project>
